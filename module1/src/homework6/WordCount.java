@@ -19,7 +19,11 @@ public class WordCount {
             String word = "олень";
             int numOfRepeats = countWord(text, word);
             System.out.printf("Слово %s повторяется %d раз.", word, numOfRepeats);
-        } catch (IllegalArgumentException e){}
+        } catch (IllegalArgumentException e){
+            System.out.print(e.getMessage());
+        } catch (NullPointerException e){
+            System.out.print(e.getMessage());
+        }
 
         System.out.println("");
 
@@ -27,7 +31,9 @@ public class WordCount {
             String word = "олень олень";
             int numOfRepeats = countWord(text, word);
             System.out.printf("Слово %s повторяется %d раз.", word, numOfRepeats);
-        } catch (RuntimeException e){
+        } catch (IllegalArgumentException e){
+            System.out.print(e.getMessage());
+        } catch (NullPointerException e){
             System.out.print(e.getMessage());
         }
 
@@ -37,7 +43,9 @@ public class WordCount {
             String word = null;
             int numOfRepeats = countWord(text, word);
             System.out.printf("Слово %s повторяется %d раз.", word, numOfRepeats);
-        } catch (RuntimeException e){
+        } catch (IllegalArgumentException e){
+            System.out.print(e.getMessage());
+        } catch (NullPointerException e){
             System.out.print(e.getMessage());
         }
 
