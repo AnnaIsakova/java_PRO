@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--Создать проект «Анкета». Сделать возможность
+ввода пользователем его имени, фамилии,
+возраста и ответов на 2-3 вопроса. Данные
+должны отправляться на сервер, который в ответ
+должен вернуть статистику по ответам в виде
+HTML документа. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My1Web</title>
+</head>
+<body>
+    <p><b>Анкета</b></p>
+    <form action="/main" method="POST">
+        <p>Имя: <input type="text" name="firstName"><br></p>
+        <p>Фамилия: <input type="text" name="lastName"><br></p>
+        <p>Возраст: <input type="text" name="age"><br></p>
+
+        <p><b>Какое у вас состояние разума?</b></p>
+        <p><input name="dzen" type="radio" value="neDzen"> Не дзен</p>
+        <p><input name="dzen" type="radio" value="dzen"> Дзен</p>
+        <p><input name="dzen" type="radio" value="pDzen" checked> Полный дзен</p>
+
+        <p><b>Как часто вы ходите в тренажерный зал?</b></p>
+        <p><input name="gym" type="radio" value="neHozhu"> Не хожу</p>
+        <p><input name="gym" type="radio" value="threeTimes"> Три раза в неделю</p>
+        <p><input name="gym" type="radio" value="everyDay" checked> Каждый день</p>
+        <p><input type="submit" value="Подтвердить"></p>
+    </form>
+</body>
+</html>
